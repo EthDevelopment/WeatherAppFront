@@ -1,4 +1,19 @@
-.app {
-    background-color: white;
-    color: black;
-}
+/* Style the main container */
+/* WeatherComponent.css */
+
+.weather-container {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    width: 80%;
+    height: 90vh;
+    margin: auto;
+
+  }
+  .p .light {
+    color: var(--light-text-color);
+  }
+  /* Add additional styles as needed */
+  
