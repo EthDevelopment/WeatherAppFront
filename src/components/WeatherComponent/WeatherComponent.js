@@ -1,3 +1,4 @@
+// WeatherComponent.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -5,35 +6,36 @@ const WeatherComponent = () => {
   const [weatherData, setWeatherData] = useState(null);
 
   useEffect(() => {
-    const apiUrl = 'http://localhost:5251/WeatherForecast';
-
-    axios.get(apiUrl)
-      .then(response => {
-        setWeatherData(response.data);
-      })
-      .catch(error => {
+    const fetchWeatherData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5251/WeatherForecast');
+        const firstData = response.data[0]; // Extract only the first item
+        setWeatherData(firstData);
+      } catch (error) {
         console.error('Error fetching weather data:', error);
-      });
-  }, []); 
+      }
+    };
+
+    fetchWeatherData();
+  }, []);
+
   return (
     <div>
-      <h2>Weather Information</h2>
+      <h2>Weather World</h2>
       {weatherData ? (
         <div>
-          {weatherData.map((data, index) => (
-            <div key={index}>
-              <p>Date: {data.formattedDate}</p>
-              <p>Temperature (C): {data.temperatureC}</p>
-              <p>Temperature (F): {data.temperatureF}</p>
-              <p>Summary: {data.summary}</p>
-              <p>Analog Clock Time: {data.analogClockTime}</p>
-              <p>City Name: {data.cityName}</p>
-              <hr />
-            </div>
-          ))}
+          <div>
+            <p>Date: {weatherData.formattedDate}</p>
+            <p>Temperature (C): {weatherData.temperatureC}</p>
+            <p>Temperature (F): {weatherData.temperatureF}</p>
+            <p>Summary: {weatherData.summary}</p>
+            <p>Analog Clock Time: {weatherData.analogClockTime}</p>
+            <p>City Name: {weatherData.cityName}</p>
+            <hr />
+          </div>
         </div>
       ) : (
-        <p>Empty</p>
+        <p>Loading weather data...</p>
       )}
     </div>
   );
