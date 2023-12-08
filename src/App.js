@@ -1,15 +1,18 @@
-// App.js
-
-import React from 'react';
-import WeatherComponent from './components/WeatherComponent/WeatherComponent';
-import './App.css';
+import React, { useState } from 'react';
 import Hero from './components/Hero/Hero';
+import WeatherComponent from './components/WeatherComponent/WeatherComponent';
 
 const App = () => {
+  const [city, setCity] = useState('Chicago');
+
+  const handleSearch = (searchTerm) => {
+    setCity(searchTerm);
+  };
+
   return (
-    <div className="app-container">
-            <Hero />
-<WeatherComponent />
+    <div>
+      <Hero onSearch={handleSearch} />
+      <WeatherComponent city={city} />
     </div>
   );
 };
