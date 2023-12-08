@@ -1,0 +1,29 @@
+/* hero.css */
+.hero-container {
+    width: 50%; /* Full width */
+    height: 100vh; /* 50% of the viewport height */
+    overflow: hidden; /* Hide overflow content */
+    right: 0;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Set text color to white or your preferred color */
+  }
+  
+  /* Additional styles for text inside the hero section */
+  .hero-image h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-image p {
+    font-size: 1.2rem;
+  }
+  

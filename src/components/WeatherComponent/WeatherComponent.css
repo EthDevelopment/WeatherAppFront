@@ -1,23 +1,21 @@
-/* Style the main container */
-/* WeatherComponent.css */
-
+/* Adjust the styles for .weather-container to position it on the right */
 .weather-container {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    position: fixed;
+    width: 50vw; /* 50% of the viewport width */
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: #f0f0f0;
+    padding: 20px;
     border-radius: 8px;
-    width: 80%;
-    height: 90vh;
-    margin: auto;
-
+    z-index: 1; /* Bring it to the front */
   }
-  .p .light {
-    color: var(--light-text-color);
-  }
-  /* Add additional styles as needed */
   
-  .weather-data{
+  /* Adjust the styles for .weather-data within .weather-container */
+  .weather-data {
     background-color: red;
     padding: 5%;
     margin: 10px;
+    height: 100%; /* Adjust the height to fill the entire .weather-container */
   }
+  
