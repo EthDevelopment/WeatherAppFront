@@ -1,11 +1,9 @@
-// SearchBar.js
 import React, { useState } from 'react';
 
 const SearchBar = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = () => {
-    // Pass the search term to the parent component (WeatherComponent)
     onSearch(searchTerm);
   };
 
