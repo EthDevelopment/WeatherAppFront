@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import DayNightToggle from './components/DayNight/DayNightToggle'; // Import the DayNightToggle component
 // Components/pages
 import Hero from './components/Hero/Hero';
+import WeatherComponent from './components/WeatherComponent/WeatherComponent';
 // CSS
 import './App.css';
 
@@ -19,11 +20,10 @@ function App() {
   const [theme, setTheme] = useState('dark');
 
   return (
+    
     <div className={`App ${theme}`}>
       {/* Your other content */}
-      <section id="Home">
-        <Hero theme={theme} setTheme={setTheme} /> {/* Pass theme and setTheme as props */}
-      </section> 
+        <WeatherComponent/>
     </div>
   );
 }
