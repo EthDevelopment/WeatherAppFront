@@ -36,6 +36,19 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "babel-jest": "^27.4.5", 
+    "jest": "^27.4.7", 
+    "react-test-renderer": "^18.2.0", 
     "@testing-library/react": "^14.1.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
+  },
+  "babel": {
+    "presets": ["@babel/preset-env"]
   }
 }

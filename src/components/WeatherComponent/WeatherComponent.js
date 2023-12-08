@@ -31,21 +31,22 @@ const WeatherComponent = () => {
   return (
     <div className="weather-container">
       <h2>Weather World</h2>
-      <SearchBar
+      {/* <SearchBar
         value={searchCity}
         onChange={(e) => setSearchCity(e.target.value)}
         onSearch={handleSearch}
-      />
+      /> */}
       {weatherData ? (
         <div>
           {/* Display weather data */}
-          <div>
-            <p>Date: {weatherData.formattedDate}</p>
+          <div className="weather-data">
+            {/* <p>Date: {weatherData.date}</p> */}
+            <p>City Name: {weatherData.cityName}</p>
             <p>Temperature (C): {weatherData.temperatureC}</p>
             <p>Temperature (F): {weatherData.temperatureF}</p>
             <p>Summary: {weatherData.summary}</p>
-            <p>Analog Clock Time: {weatherData.analogClockTime}</p>
-            <p>City Name: {weatherData.cityName}</p>
+            <p>Time: {weatherData.analogClockTime}</p>
+            
             <hr />
           </div>
         </div>

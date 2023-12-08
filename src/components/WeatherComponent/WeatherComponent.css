@@ -5,7 +5,6 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0;
     border-radius: 8px;
     width: 80%;
     height: 90vh;
@@ -17,3 +16,8 @@
   }
   /* Add additional styles as needed */
   
+  .weather-data{
+    background-color: red;
+    padding: 5%;
+    margin: 10px;
+  }
