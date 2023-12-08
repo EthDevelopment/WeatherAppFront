@@ -37,10 +37,12 @@ const WeatherComponent = () => {
           <div className="weather-data">
             {/* <p>Date: {weatherData.date}</p> */}
             <p className="city-info" >City Name: {weatherData.cityName}</p>
-            <p className="weather-c" >Temperature (C): {weatherData.temperatureC}</p>
-            <p className="weather-f" >Temperature (F): {weatherData.temperatureF}</p>
-            <p className="weather-condition" >Weather condition: {weatherData.summary}</p>
             <p className="time">Time: {weatherData.analogClockTime}</p>
+            <p className="weather-condition" >Condition: {weatherData.summary}</p>
+            <p className="weather-c" >Temperature (C): {weatherData.temperatureC}</p>
+            {/* <p className="weather-f" >Temperature (F): {weatherData.temperatureF}</p> */}
+
+
           </div>
         </div>
       ) : (

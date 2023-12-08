@@ -15,4 +15,24 @@
     padding: 5%;
     height: 100vh; /* Adjust the height to fill the entire .weather-container */
   }
+
+  .city-info {
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .time {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .weather-condition {
+    font-weight: bold;
+    text-align: center;
+  }
   
+  .weather-c{
+    text-align: center;
+    font-weight: bold;
+  }
