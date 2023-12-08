@@ -2,8 +2,7 @@
 // IMPORTS
 import React, { useState } from 'react';
 // Page Overlays
-import Navbar from './components/Nav/Navbar';
-import DayNightToggle from './components/DayNight/daynighttoggle'; // Import the DayNightToggle component
+import DayNightToggle from './components/DayNight/DayNightToggle'; // Import the DayNightToggle component
 // Components/pages
 import Hero from './components/Hero/Hero';
 // CSS
@@ -21,8 +20,6 @@ function App() {
 
   return (
     <div className={`App ${theme}`}>
-      {/* SocialIconsBar component to display the vertical bar with social media icons */}
-      <Navbar />
       {/* Your other content */}
       <section id="Home">
         <Hero theme={theme} setTheme={setTheme} /> {/* Pass theme and setTheme as props */}
