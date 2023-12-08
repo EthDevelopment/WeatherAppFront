@@ -1,20 +1,27 @@
-// hero.js
-import React from 'react';
-import './Hero.css'; // Import your CSS for styling
+import React, { useState } from 'react';
+import './Hero.css';
 import SearchBar from '../SearchBar/SearchBar';
 
-// hero.js
-const Hero = () => {
-    return (
-      <div className="hero-container">
-        <div className="hero-image">
-          <h1>Weather Tracker</h1>
-          <p>Search your city below</p>
-          <SearchBar/>
-        </div>
-      </div>
-    );
+const Hero = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = () => {
+    onSearch(searchTerm);
   };
-  
-  export default Hero;
-  
+
+  return (
+    <div className="hero-container">
+      <div className="hero-image">
+        <h1>Weather Tracker</h1>
+        <p>Search your city below</p>
+        <SearchBar
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          onSearch={handleSearch}
+        />
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
