@@ -7,9 +7,9 @@ import SearchBar from '../SearchBar/SearchBar';
 const Hero = () => {
     return (
       <div className="hero-container">
-        <div className="hero-image" style={{ backgroundImage: 'url(../assets/ice.jpeg)' }}>
+        <div className="hero-image">
           <h1>Weather Tracker</h1>
-          <p>Your hero description goes here.</p>
+          <p>Search your city below</p>
           <SearchBar/>
         </div>
       </div>
